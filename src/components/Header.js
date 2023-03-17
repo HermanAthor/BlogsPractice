@@ -20,7 +20,7 @@ function Header() {
   }
 
   useEffect(()=>{
-    window.addEventListener('scroll', handleS())
+    window.addEventListener('scroll', handleScroll())
     return ()=>{
       window.removeEventListener('scroll', handleScroll())
     }
