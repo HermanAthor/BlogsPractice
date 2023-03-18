@@ -15,9 +15,6 @@ function Header() {
     }
   }
 
-  function handleS(){
-    setOnScroll((prevOnScroll)=> !prevOnScroll)
-  }
 
   useEffect(()=>{
     window.addEventListener('scroll', handleScroll())
