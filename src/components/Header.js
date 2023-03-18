@@ -1,33 +1,33 @@
 import React from 'react'
 import "./header.css"
-import {useState, useEffect} from "react"
+//import {useState, useEffect} from "react"
 
 
 function Header() {
-  const[onScroll, setOnScroll] = useState(false)
+  // const[onScroll, setOnScroll] = useState(true)
 
-  function handleScroll(){
-    const scrollConst = window.pageYOffset
-    if(scrollConst > 0 && onScroll){
-      setOnScroll((prevOnScroll)=> !prevOnScroll)
-    }else if(scrollConst === 0 && !onScroll){
-      setOnScroll(true)
-    }
-  }
+  // function handleScroll(){
+  //   const scrollConst = window.pageYOffset
+  //   if(scrollConst > 0 && onScroll){
+  //     setOnScroll((prevOnScroll)=> !prevOnScroll)
+  //   }else if(scrollConst === 0 && !onScroll){
+  //     setOnScroll(true)
+  //   }
+  // }
 
 
-  useEffect(()=>{
-    window.addEventListener('scroll', handleScroll())
-    return ()=>{
-      window.removeEventListener('scroll', handleScroll())
-    }
-  },)
+  // useEffect(()=>{
+  //   window.addEventListener('scroll', handleScroll())
+  //   return ()=>{
+  //     window.removeEventListener('scroll', handleScroll())
+  //   }
+  // },)
   
   
 
   return (
      
-    <div className={onScroll? "header-container" : "hidden"}>
+    <div className= "header-container">
         <h1>INSTRUMENT</h1>
         <ul>
             <li>WHAT WE DO</li>

@@ -1,0 +1,29 @@
+.sidebar-container{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding-top: 20px;
+    left: 0;
+    top: 100px;
+    height: calc(100% - 100px);
+    width: 200px;;
+    background-color: rgb(204, 139, 139);
+    color: aliceblue;
+    overflow-y: auto;
+    
+    /*margin-top: 100px;*/
+
+}
+.sidebar-container >ul >li{
+    font-size: 20px;
+    list-style: none;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+.sidebar-container >ul >li:hover{
+    background-color: blue;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
