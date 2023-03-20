@@ -1,0 +1,11 @@
+.contact-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+.contact-card >img{
+    border-radius: 50px;
+    margin-top: 20px;
+}

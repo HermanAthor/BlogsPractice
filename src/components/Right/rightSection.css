@@ -1,0 +1,10 @@
+.right-section{
+    position: fixed;
+    right: 0;
+    top:100px;
+    height: 100%;
+    width: 300px;
+    background-color: rgb(170, 169, 169);
+    display: flex;
+    justify-content: center;
+}

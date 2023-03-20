@@ -4,6 +4,7 @@ import Info from './Info'
 import Data from '../Data'
 import Sidebar from './Sidebar'
 import "./app.css"
+import RightSection from './Right/RightSection'
 
 
 
@@ -15,6 +16,8 @@ function App() {
       <Header />
       <Sidebar />
       <Info data={Data} />
+      <RightSection />
+      
     </div>
   )
 }

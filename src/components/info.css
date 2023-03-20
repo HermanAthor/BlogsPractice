@@ -2,9 +2,9 @@
     margin: 10px;
     width: 600px;
     border-radius: 10px;
-    margin-top: 100px;
     color: white;
     overflow-y: scroll;
+    
     
     
 
@@ -15,7 +15,10 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-left: 200px;
+    margin-left: 190px;
+    margin-top: 100px;
+    
+    
 }
 .info-container > img{
     padding: 10px;
@@ -31,4 +34,17 @@
 }
 .info-container > p{
     margin: 10px;
+}
+.info-container > button{
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    
+}
+.like{
+    background-color: rgb(72, 177, 226);
+}
+.dislike{
+    background-color: rgb(204, 100, 100);
 }
