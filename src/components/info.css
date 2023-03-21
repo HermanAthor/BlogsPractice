@@ -4,6 +4,7 @@
     border-radius: 10px;
     color: white;
     overflow-y: scroll;
+    border-bottom: 2px solid white;
     
     
     
@@ -12,6 +13,7 @@
 .Main-info-container{
     background-color: black;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;

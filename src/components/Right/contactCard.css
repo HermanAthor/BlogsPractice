@@ -3,6 +3,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    border-bottom: 2px solid black;
 
 }
 .contact-card >img{
