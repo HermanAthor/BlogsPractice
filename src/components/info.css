@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .info-container{
     margin: 10px;
     width: 600px;
@@ -10,6 +11,8 @@
     
 
 }
+=======
+>>>>>>> 620b89255b888dad8c95a41312f272b6eabc22fd
 .Main-info-container{
     background-color: black;
     display: flex;
@@ -17,10 +20,17 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-left: 190px;
+    border: 1px solid red;
+    width: 50%;
+    margin-left: 19.8%;
     margin-top: 100px;
-    
-    
+}
+.info-container{
+    margin: 10px;
+    width: 600px;
+    border-radius: 10px;
+    color: white;
+    /* overflow-y: scroll;  */
 }
 .info-container > img{
     padding: 10px;
