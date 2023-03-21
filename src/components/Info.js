@@ -8,8 +8,8 @@ function Info({data}) {
     function handleLike(){
         return setlike(like + 1)
     }
-    function handleDislike(e){
-        return e.target.value(setDislike(like + 1))
+    function handleDislike(){
+        return (setDislike(like + 1))
     }
 
     
@@ -34,9 +34,8 @@ function Info({data}) {
                 onClick={handleDislike}
                 key={item.id}
                 value={item.id}
-
                 >
-                    Dislike <span>{dislike}</span>
+                Dislike <span>{dislike}</span>
                 </button>
                 <button>Follow +</button>
         
