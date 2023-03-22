@@ -1,6 +1,10 @@
 import React from 'react'
 import "./sidebar.css"
 
+import { FaHome, FaRegKissBeam, FaUserFriends, FaRegHandRock, FaRegHandPeace, FaChild, FaRegCalendarAlt, FaTools  } from 'react-icons/fa';
+
+
+
 function Sidebar() {
   // if(!data){
   //   return null
@@ -9,23 +13,14 @@ function Sidebar() {
   return (
     <div className='sidebar-container'>
       <ul>
-        <li>HOME</li>
-        <br></br>
-        <li>PROFILE</li>
-        <br></br>
-        <li>FRIENDS</li>
-        <br></br>
-        <li>WHAT WE DO</li>
-        <br></br>
-        <li>WHO WE ARE</li>
-        <br></br>
-        <li>COMMUNITY</li>
-        <br></br>
-        <li>CONTACT US</li>
-        <br></br>
-        <li>SETTINGS</li>
-        <br></br>
-        
+        <li><span><FaHome /></span>Home</li>
+        <li><span><FaRegKissBeam/></span>Profile</li>
+        <li><span><FaUserFriends/></span>Friends</li>
+        <li><span><FaRegHandRock/></span>What we do</li>
+        <li><span><FaRegHandPeace/></span>Who we are</li>
+        <li><span><FaChild/></span>Community</li>
+        <li><span><FaRegCalendarAlt/></span>Contact us</li>
+        <li><span><FaTools/></span>Settings</li>
       </ul>
     </div>
   )

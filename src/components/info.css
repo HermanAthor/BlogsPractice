@@ -1,46 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto:wght@300&display=swap');
 .Main-info-container{
-    background-color: black;
+    background-color: #121212;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 50%;
-    margin-left: 19.8%;
+    margin-left: 20%;
     margin-top: 100px;
 }
 .info-container{
-    margin: 10px;
-    width: 600px;
+    margin: 15px;
+    width: 500px;
     border-radius: 10px;
     color: white;
-    /* overflow-y: scroll;  */
+    border: 1px solid #363636;
+    background-color: #000000;
+    padding: 20px;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
 }
-.info-container > img{
+.info-container:first-child{
+    margin-top: 40px;
+}
+.info-container img{
     padding: 10px;
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
 }
-.info-container > h3{
-    font-family: Arial, Helvetica, sans-serif;
+.info-container h3{
+    font-family: 'Pacifico', cursive;
     font-weight: 700;
     font-size: 25px;
     margin-left: 10px;
+    /* margin-top: -2px; */
     
 }
-.info-container > p{
-    margin: 10px;
+.info-container p{
+    padding: 10px;
+    font-family: "roboto", "sans-serif";
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: -20px;
+    letter-spacing: 1px;
 }
-.info-container > button{
+.info-container button{
     margin: 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 600;
 }
 .like{
     background-color: rgb(72, 177, 226);
 }
 .dislike{
-    background-color: rgb(204, 100, 100);
+    background-color: #f44444;
 }

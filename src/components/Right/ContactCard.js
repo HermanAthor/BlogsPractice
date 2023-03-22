@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import "./contactCard.css"
-import {faEnvelope} from "react-icons/fc"
+
 
 
 function ContactCard() {
@@ -35,7 +35,6 @@ function ContactCard() {
             </h2>
             <h4>
                 <span> 
-                  <faEnvelope/>
                   {user.email} </span>
                 <span> phone number </span>
             </h4>

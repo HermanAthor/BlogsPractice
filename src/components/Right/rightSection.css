@@ -1,10 +1,15 @@
 .right-section{
     position: fixed;
     right: 0;
-    top:100px;
     height: 100%;
     width: 30%;
-    background-color: rgb(170, 169, 169);
+    background-color: #1a1919;
     display: flex;
     justify-content: center;
+    color: white;
+    margin-top: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
