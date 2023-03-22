@@ -47,18 +47,3 @@ export default ContactCard
 
 
 
-// const[loading, setLoading] = React.useState(true)
-// const[data, setData] = React.useState([])
-
-// React.useEffect(()=>{
-//     axios({
-//         method: 'GET',
-//         url:'https://randomuser.me/api'
-//     })
-//     .then((res)=> {
-//         console.log(res.data.results)
-//         setData(res.data.results)
-//     })
-//     .catch((err)=> console.log(err))
-//     .finally(()=> setLoading(false))
-// },[])
