@@ -15,31 +15,32 @@ function Info({data}) {
     
     return (
 
-    <div className='Main-info-container'>
+    <div>
         {data.map((item) =>(
             <div  className='info-container' key={item.id}>
-                <img src={item.image} alt="imag"/>
-                <h3>{item.name}</h3>
-                <p>{item.title}</p>
-                <button 
-                className='like' 
-                onClick={handleLike}
-                key={item.id}
-                value={item.id}
-                >
-                    Like <span>{like}</span>
-                </button>
-                <button 
-                className='dislike' 
-                onClick={handleDislike}
-                key={item.id}
-                value={item.id}
-                >
-                Dislike <span>{dislike}</span>
-                </button>
-                <button>Follow +</button>
+                 <img src={item.image} alt="imag"/>
+                    <h3>{item.name}</h3>
+                    <p>{item.title}</p>
+                    <button 
+                    className='like' 
+                    onClick={handleLike}
+                    key={item.id}
+                    value={item.id}
+                    >
+                        Like <span>{like}</span>
+                    </button>
+                    <button 
+                    className='dislike' 
+                    onClick={handleDislike}
+                    key={item.id}
+                    value={item.id}
+                    >
+                    Dislike <span>{dislike}</span>
+                    </button>
+                    <button>Follow +</button>
         
-            </div>))}
+            </div>))
+        }
             
         
     </div>
