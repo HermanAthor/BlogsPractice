@@ -25,7 +25,7 @@ function ContactCard() {
       }, []);
     
   return (
-    <div>
+    <div style={{position:'relative'}}>
         {loading && <div>Loading....</div> }
         {data.map((user)=> <div className='contact-card'>
             <img src={user.picture.large} alt="pic"/>
