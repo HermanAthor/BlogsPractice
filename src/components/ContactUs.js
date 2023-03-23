@@ -30,6 +30,7 @@ function ContactUs() {
       ${form.email}
       ${form.message}
       ${form.phoneNumber}
+      Joined mail list: ${form.joinMail}
     
     `)
   }
