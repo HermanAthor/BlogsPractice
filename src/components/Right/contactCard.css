@@ -3,24 +3,28 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
-
+    align-items: center;
+    /* border: 1px solid green; */
 
 }
 .contact-card img{
-    width: 180px;
+    width: 100px;
     border-radius: 50%;
-    margin-top: 20px;
-    max-width: 100%;
+    
+    /* max-width: 100%; */
     border: 1px solid white;
 }
 .contact-card h2{
     font-family: "Roboto";
-    margin-top: 40px;
+    margin-top: 8px;
+    font-size: 18px;
 }
 .contact-card h2 span{
     margin-left: 10px;
     letter-spacing: 2px;
+}
+.contact-card h4{
+    margin: 0;
 }
 .contact-card h4 span{
     font-family: 'Fasthand', cursive;
