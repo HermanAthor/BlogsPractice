@@ -2,3 +2,7 @@
     display: flex;
     
 }
+.profile-right{
+    display: flex;
+    flex-direction: column;
+}

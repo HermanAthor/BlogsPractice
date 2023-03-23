@@ -34,8 +34,7 @@ function ContactCard() {
                 <span>{user.name.last}</span>
             </h2>
             <h4>
-                <span> 
-                  {user.email} </span>
+                <span>{user.email} </span>
                 <span> phone number </span>
             </h4>
         </div>)}
@@ -47,3 +46,18 @@ export default ContactCard
 
 
 
+// const[loading, setLoading] = React.useState(true)
+// const[data, setData] = React.useState([])
+
+// React.useEffect(()=>{
+//     axios({
+//         method: 'GET',
+//         url:'https://randomuser.me/api'
+//     })
+//     .then((res)=> {
+//         console.log(res.data.results)
+//         setData(res.data.results)
+//     })
+//     .catch((err)=> console.log(err))
+//     .finally(()=> setLoading(false))
+// },[])
