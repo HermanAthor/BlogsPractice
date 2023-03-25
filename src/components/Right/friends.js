@@ -6,7 +6,7 @@ function Friends() {
   return (
     <>
         <div className='friends-container'>
-            <p className='heading'>Friends</p>
+            <h1 className='heading'>Friends</h1>
             <div className='friends-list'>
                 {
                     data.map((people) => {

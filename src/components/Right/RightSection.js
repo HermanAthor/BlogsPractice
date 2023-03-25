@@ -1,6 +1,6 @@
 import React from 'react'
 import ContactCard from './ContactCard'
-import Friends from './friends'
+import Friends from './Friends'
 import "./rightSection.css"
 
 

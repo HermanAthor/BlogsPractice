@@ -3,6 +3,7 @@
     width: 100%;
     /* border: 1px solid red; */
     padding: 20px;
+    overflow: scroll;
 }
 .heading{
     color: #ffffff;
@@ -21,8 +22,9 @@
     width: 100%;
     height: 100% ;
     margin-bottom: 4px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding-bottom: 100px;
+    overflow: scroll;
 }
 .boxer{
     padding: 2px 0;
