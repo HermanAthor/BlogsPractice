@@ -3,7 +3,7 @@
     background-color: #121212;
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     /* border: 1px solid red; */
@@ -19,11 +19,6 @@
     border: 1px solid #363636;
     background-color: #000000;
     padding: 20px;
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
 }
 .info-container:first-child{
     margin-top: 40px;
