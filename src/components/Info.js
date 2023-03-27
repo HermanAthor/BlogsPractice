@@ -1,8 +1,10 @@
 import React from 'react'
 import "./info.css"
+import Blogs from './Blogs'
 
 
 function Info({data}) {
+    
     
     const[like, setlike]= React.useState(0)
     const[dislike, setDislike]= React.useState(0)
@@ -59,7 +61,8 @@ function Info({data}) {
                     )
                 })
             }
-            
+            <Blogs/>
+             
         </div>
     )
 }

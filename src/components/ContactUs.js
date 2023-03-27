@@ -1,6 +1,7 @@
 import React from 'react'
 
 import "./contactUs.css"
+import { Link } from 'react-router-dom'
 
 function ContactUs() {
   const [form,setForm] = React.useState({
@@ -86,6 +87,11 @@ function ContactUs() {
                 />
                 <label htmlFor='joinMail'>Do you want to join our mail list?</label>
               </div>
+              <div>
+                Make sure to read our terms and condition here
+                <span><Link to='terms-and-conditions'>Terms and Condition</Link></span>
+              </div>
+              
               
               <button onClick={handleSubmit}>Submit</button>
             </form>
