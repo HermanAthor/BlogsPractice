@@ -1,5 +1,7 @@
 import React from 'react'
 import "./header.css"
+import { Link } from 'react-router-dom'
+
 //import {useState, useEffect} from "react"
 
 
@@ -32,8 +34,9 @@ function Header() {
         <ul>
             <li>WHAT WE DO</li>
             <li>WHO WE ARE</li>
-            <li>BEING HERE</li>
+            <Link to="apps"><li>APPS</li></Link>
             <li>CAREERS</li>
+            <Link to='terms-and-conditions'>Terms and Condition</Link>
         </ul>
     </div>
   )

@@ -1,10 +1,11 @@
 import React from 'react'
 import Header from './Header'
-import Info from './Info'
+// import Info from './Info'
 import Data from '../Data'
 import Sidebar from './Sidebar'
 import "./app.css"
 import RightSection from './Right/RightSection'
+import MainContent from './MainContent'
 
 
 
@@ -15,7 +16,7 @@ function App() {
     <div className='app-container'>
       <Header />
       <Sidebar />
-      <Info data={Data} />
+      <MainContent/>
       <RightSection />
       
     </div>
@@ -23,3 +24,9 @@ function App() {
 }
 
 export default App
+
+
+/* 
+<Info data={Data} /> 
+<Sidebar />
+*/
