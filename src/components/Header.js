@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 //import {useState, useEffect} from "react"
 
 
-function Header() {
+function Header({setSearch}) {
   // const[onScroll, setOnScroll] = useState(true)
 
   // function handleScroll(){
@@ -31,12 +31,18 @@ function Header() {
      
     <div className= "header-container">
         <h1>INSTRUMENT.</h1>
+        <input
+          type='text'
+          placeholder='Search Posts'
+          onChange={(e)=> setSearch(e.target.value)}
+          className="search-input"
+        />
         <ul>
             <li>WHAT WE DO</li>
             <li>WHO WE ARE</li>
-            <Link to="apps"><li>APPS</li></Link>
+            {/* <Link to="apps"><li>APPS</li></Link> */}
             <li>CAREERS</li>
-            <Link to='terms-and-conditions'>Terms and Condition</Link>
+            {/* <Link to='terms-and-conditions'>Terms and Condition</Link> */}
         </ul>
     </div>
   )

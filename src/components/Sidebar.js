@@ -2,7 +2,7 @@ import React from 'react'
 import "./sidebar.css"
 import {NavLink} from "react-router-dom"
 
-import { FaHome, FaRegKissBeam, FaUserFriends, FaRegHandRock, FaRegHandPeace, FaChild, FaRegCalendarAlt, FaTools  } from 'react-icons/fa';
+import { FaHome, FaRegKissBeam, FaUserFriends, FaRegHandRock, FaRegHandPeace, FaChild, FaRegCalendarAlt, FaTools ,FaTh} from 'react-icons/fa';
 
 
 
@@ -22,6 +22,7 @@ function Sidebar() {
         <NavLink to='who-we-are'><li><span><FaRegHandPeace/></span>Who we are</li></NavLink>
         <NavLink to='community'><li><span><FaChild/></span>Community</li></NavLink>
         <NavLink to='contact-us'><li><span><FaRegCalendarAlt /></span>Contact Us</li></NavLink>
+        <NavLink to='apps'><li><span><FaTh/></span>Apps</li></NavLink>
         <NavLink to='settings'><li><span><FaTools/></span>Settings</li></NavLink>
       </ul>
     </div>
