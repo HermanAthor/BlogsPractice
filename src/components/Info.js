@@ -4,20 +4,37 @@ import "./info.css"
 
 
 function Info({data, search}) {
+    const [posts, setPosts] = React.useState(data)
+    console.log(posts)
+
+    function likePost(id) {
+        setPosts(prevPosts =>
+          prevPosts.map(post => {
+            const newLike = post.id === id ? post.like + 1 : post.like
+            return { ...post, like: newLike }
+          })
+        )
+    }
+    function dislikePost(id) {
+        setPosts(prevPosts =>
+          prevPosts.map(post => {
+            const newDislike = post.id === id ? post.dislike + 1 : post.dislike
+            return { ...post, dislike: newDislike }
+          })
+        )
+    }
+        // i will work on this tomorrow 29.03.2023
+//    function handleComment(e, id){
+//         setPosts((prevPosts)=> prevPosts.map((post)=> {
+
+//         })
+//    }
     
     
-    const[like, setlike]= React.useState(0)
-    const[dislike, setDislike]= React.useState(0)
-    // const[search, setSearch]= React.useState('')
     const [comment, setComment]= React.useState('')
     const [comments, setComments]= React.useState([])
     const [addComment, setAddComment]= React.useState(false)
-    function handleLike(){
-        return setlike(like + 1)
-    }
-    function handleDislike(){
-        return (setDislike(like + 1))
-    }
+
     function handleAddComment(){
         setAddComment((prevAddComment)=>!prevAddComment)
     }
@@ -33,13 +50,8 @@ function Info({data, search}) {
     return(
         <div>
             <h1>Home</h1>
-            {/* <input
-                type='text'
-                placeholder='Search Posts'
-                onChange={(e)=> setSearch(e.target.value)}
-            /> */}
             {
-                data.filter((post) => {
+                posts.filter((post) => {
                     if(search === ''){
                         return post
                     }else if (
@@ -49,7 +61,7 @@ function Info({data, search}) {
                         return post
                     }
                 }).map((item)=>{
-                    const {id, name, title,image} = item
+                    const {id, name, title,image,like, dislike} = item
                     return(
                         <div className='info-container' key={id}>
                             <img src={image} alt="imag"/>
@@ -81,24 +93,26 @@ function Info({data, search}) {
                                     </div>
                                 </div>
                             }
-                            <button 
-                            className='like' 
-                            onClick={handleLike}
-                            key={id}
-                            value={id}
-                            >
-                                Like <span>{like}</span>
-                            </button>
-                            <button 
-                            className='dislike' 
-                            onClick={handleDislike}
-                            key={id}
-                            value={id}
-                            >
-                            Dislike <span>{dislike}</span>
-                            </button>
-                            <button>Follow +</button>
-                            <button onClick={handleAddComment}>{addComment? 'Close Comments': 'Add Comments'}</button>
+                            <div className='buttons'>
+                                <button 
+                                className='like' 
+                                onClick={()=> likePost(id)}
+                                key={id}
+                                value={id}
+                                >
+                                    Like <span>{like}</span>
+                                </button>
+                                <button 
+                                className='dislike' 
+                                onClick={()=> {dislikePost(id)}}
+                                key={id}
+                                value={id}
+                                >
+                                Dislike <span>{dislike}</span>
+                                </button>
+                                <button>Follow +</button>
+                                <button onClick={handleAddComment}>{addComment? 'Close Comments': 'Add Comments'}</button>
+                            </div>
                         </div>
                     )
                 })
