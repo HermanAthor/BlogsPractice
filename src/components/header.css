@@ -45,9 +45,9 @@
 .hidden{
     display: none;
 }
-.search-input{
+.header-container .search-input{
     width: 600px;
-    max-width: 600px;
+    max-width: 450px;
     min-width: auto;
     padding: 10px 5px;
     border: none;
