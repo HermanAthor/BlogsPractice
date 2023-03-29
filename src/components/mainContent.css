@@ -1,5 +1,5 @@
 .main-content{
-    background-color: #b5b0b0;
+    background-color: #8b8585;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -10,4 +10,5 @@
     margin-left: 20%;
     margin-top: 100px;
     padding-left: 10px;
+    height: 100vh;
 }
