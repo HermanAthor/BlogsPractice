@@ -66,6 +66,10 @@ textarea{
     padding: 10px ;
     margin-top: 10px;
     border-radius: 20px;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
 }
 .comment-area{
     display: flex;
@@ -76,4 +80,12 @@ textarea{
     padding: 15px;
     color: aliceblue;
     background-color: #363636;
+}
+.comment-text{
+    width: fit-content;
+    background-color: #898887;
+    color: #f5f3ee;
+    padding: 10px 5px;
+    margin: 10px;
+    border-radius: 10px;
 }

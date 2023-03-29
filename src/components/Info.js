@@ -23,29 +23,34 @@ function Info({data, search}) {
           })
         )
     }
-        // i will work on this tomorrow 29.03.2023
-//    function handleComment(e, id){
-//         setPosts((prevPosts)=> prevPosts.map((post)=> {
+    function commentOnPOst(id, e){
+        setPosts((prevPosts)=> 
+            prevPosts.map((post)=>
+                post.id === id? {...post, comment: e.target.value }: post
+            ))
+    }
 
-//         })
-//    }
-    
-    
-    const [comment, setComment]= React.useState('')
-    const [comments, setComments]= React.useState([])
-    const [addComment, setAddComment]= React.useState(false)
-
-    function handleAddComment(){
-        setAddComment((prevAddComment)=>!prevAddComment)
+    function handleOnClick(id){
+        setPosts((prevPosts)=>
+            prevPosts.map((post)=> 
+                post.id === id? {...post, comments:[...post.comments, post.comment], comment:'',}:post
+            )
+        )
     }
-    function handleChange(e){
-        setComment(e.target.value)
+    function handleAddComment(id){
+        setPosts((prevPosts) =>
+          prevPosts.map((post) =>
+            post.id === id ? { ...post, addComment: !post.addComment } : post
+          )
+        )
     }
-    function handleOnClick (){
-        setComments((prevComments)=>[...prevComments, comment])
-        setComment('')
+    function handleFollow(id){
+        setPosts((prevPosts) =>
+          prevPosts.map((post) =>
+            post.id === id ? { ...post, isFollow: !post.isFollow } : post
+          )
+        )
     }
-        
     
     return(
         <div>
@@ -61,7 +66,8 @@ function Info({data, search}) {
                         return post
                     }
                 }).map((item)=>{
-                    const {id, name, title,image,like, dislike} = item
+                    const {id, name, title,image,like, dislike,comment,comments,addComment, isFollow} = item
+                    console.log(comments)
                     return(
                         <div className='info-container' key={id}>
                             <img src={image} alt="imag"/>
@@ -73,7 +79,7 @@ function Info({data, search}) {
                                     <div>
                                         <h3>Comments</h3>
                                         {comments.map((text, index) => (
-                                            <div key={index}>
+                                            <div className='comment-text' key={index} id={index}>
                                                 {text}
                                             </div>))
                                         } 
@@ -82,14 +88,14 @@ function Info({data, search}) {
                                     <div className='comment-area'>
                                         <textarea 
                                         name="comment" 
-                                        id="comment" 
+                                        id={comment} 
                                         cols="2" 
                                         rows="2"
-                                        onChange={handleChange}
+                                        onChange={(e)=>{commentOnPOst(id,e)}}
                                         value={comment}
                                         >
                                         </textarea>
-                                        <button onClick={handleOnClick}> Comment</button>
+                                        <button onClick={()=>{handleOnClick(id)}}> Comment</button>
                                     </div>
                                 </div>
                             }
@@ -110,8 +116,8 @@ function Info({data, search}) {
                                 >
                                 Dislike <span>{dislike}</span>
                                 </button>
-                                <button>Follow +</button>
-                                <button onClick={handleAddComment}>{addComment? 'Close Comments': 'Add Comments'}</button>
+                                <button onClick={()=>{handleFollow(id)}}>{isFollow? "Followed" : "Follow +"}</button>
+                                <button onClick={()=>{handleAddComment(id)}}>{addComment? 'Close Comments': 'Add Comments'}</button>
                             </div>
                         </div>
                     )
