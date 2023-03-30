@@ -6,6 +6,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -17,6 +18,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -28,6 +30,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -39,6 +42,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -50,6 +54,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -61,6 +66,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -72,6 +78,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -83,6 +90,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -94,6 +102,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -105,6 +114,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -116,6 +126,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -127,6 +138,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -138,6 +150,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -149,6 +162,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -160,6 +174,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -171,6 +186,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -182,6 +198,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -193,6 +210,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -204,6 +222,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false
@@ -215,6 +234,7 @@ const data =[{
     "like": 0,
     "dislike": 0,
     "comment":"",
+    "commented":false,
     "addComment": false,
     "comments": [],
     "isFollow":false

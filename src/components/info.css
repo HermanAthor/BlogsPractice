@@ -1,28 +1,32 @@
 
-.Main-info-container{
-    background-color: #121212;
+.home{
+    position: sticky;
+    top: 100px;
+    color: #f5f3ee;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid red; */
-    width: 50%;
-    margin-left: 20%;
-    margin-top: 100px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 60px;
+    background-color: #b5b0b0;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 100px;
+
+
+    
+    
+    
 }
 .info-container{
     margin: 15px;
-    width: 600px;
+    width: 650px;
     border-radius: 10px;
     color: white;
     border: 1px solid #363636;
     background-color: #000000;
     padding: 20px;
+    
 
-}
-.info-container:first-child{
-    /*margin-top: 40px;*/
 }
 .info-container img{
     padding: 10px;
@@ -65,11 +69,12 @@ textarea{
     height: 60px;
     padding: 10px ;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 30px;
     resize: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 20px;
+    letter-spacing: 1.5px;
 }
 .comment-area{
     display: flex;
@@ -85,7 +90,8 @@ textarea{
     width: fit-content;
     background-color: #898887;
     color: #f5f3ee;
-    padding: 10px 5px;
+    padding: 10px 10px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
+    letter-spacing: 1.5px;
 }

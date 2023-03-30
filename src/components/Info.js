@@ -4,8 +4,25 @@ import "./info.css"
 
 
 function Info({data, search}) {
-    const [posts, setPosts] = React.useState(data)
-    console.log(posts)
+            //#this code was used before we saved the posts to localStorege/ database
+    // const [posts, setPosts] = React.useState(data)
+    // console.log(posts)
+
+
+            // #this GETs  the posts from  localStorage/database
+    const [posts, setPosts] = React.useState(() => {
+        const storedPosts = localStorage.getItem('posts');
+        if (storedPosts) {
+          return JSON.parse(storedPosts);
+        } else {
+          return data;
+        }
+    });
+            //this sets/PUTs the posts to the localStorege || Database(thogh not yet created)
+    React.useEffect(() => {
+        localStorage.setItem('posts', JSON.stringify(posts));
+    }, [posts]);
+
 
     function likePost(id) {
         setPosts(prevPosts =>
@@ -33,9 +50,15 @@ function Info({data, search}) {
     function handleOnClick(id){
         setPosts((prevPosts)=>
             prevPosts.map((post)=> 
-                post.id === id? {...post, comments:[...post.comments, post.comment], comment:'',}:post
+                 post.id === id /*&& post.comment?.value?.length > 0*/ ? 
+                {...post, comments:[...post.comments, post.comment], comment:''} : post
             )
         )
+        setPosts((prevPosts) =>
+           prevPosts.map((post) =>
+             post.id === id ? { ...post, commented: !post.commented } : post
+           )
+         )
     }
     function handleAddComment(id){
         setPosts((prevPosts) =>
@@ -54,7 +77,7 @@ function Info({data, search}) {
     
     return(
         <div>
-            <h1>Home</h1>
+            <div className='home'>Home</div>
             {
                 posts.filter((post) => {
                     if(search === ''){
@@ -66,7 +89,19 @@ function Info({data, search}) {
                         return post
                     }
                 }).map((item)=>{
-                    const {id, name, title,image,like, dislike,comment,comments,addComment, isFollow} = item
+                    const {
+                        id, 
+                        name, 
+                        title,
+                        image,
+                        like, 
+                        dislike,
+                        comment,
+                        comments,
+                        addComment, 
+                        isFollow,
+                        commented
+                    } = item
                     console.log(comments)
                     return(
                         <div className='info-container' key={id}>
@@ -86,15 +121,16 @@ function Info({data, search}) {
                                     </div> 
                                 
                                     <div className='comment-area'>
-                                        <textarea 
-                                        name="comment" 
-                                        id={comment} 
-                                        cols="2" 
-                                        rows="2"
-                                        onChange={(e)=>{commentOnPOst(id,e)}}
-                                        value={comment}
-                                        >
-                                        </textarea>
+                                        {commented && <textarea 
+                                            name="comment" 
+                                            id={comment} 
+                                            cols="2" 
+                                            rows="2"
+                                            onChange={(e)=>{commentOnPOst(id,e)}}
+                                            value={comment}
+                                            >
+                                            </textarea>
+                                        }
                                         <button onClick={()=>{handleOnClick(id)}}> Comment</button>
                                     </div>
                                 </div>
