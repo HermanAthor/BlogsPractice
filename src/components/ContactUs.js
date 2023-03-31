@@ -2,15 +2,29 @@ import React from 'react'
 
 import "./contactUs.css"
 import { Link } from 'react-router-dom'
+import data from '../Data'
 
 function ContactUs() {
-  const [form,setForm] = React.useState({
-    firstName:"",
-    lastName:"",
-    email:"",
-    phoneNumber:"",
-    joinMail: true,
-    message:"",})
+  // const [form,setForm] = React.useState({
+  //   firstName:"",
+  //   lastName:"",
+  //   email:"",
+  //   phoneNumber:"",
+  //   joinMail: true,
+  //   message:"",
+  // })
+  const [form,setForm] = React.useState(()=>{
+    const storedForm = localStorage.getItem('ContactData')
+    if(storedForm){
+      return JSON.parse(storedForm)
+    }else{
+      return data
+    }
+  })
+  React.useEffect(()=>{
+    window.localStorage.setItem('ContactData', JSON.stringify(form))
+  },[form])
+
   function handleChange(event){
     const{name, value,type, checked } = event.target
     setForm((prevForm)=>{
