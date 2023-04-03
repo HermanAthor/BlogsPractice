@@ -7,6 +7,7 @@ import "./app.css"
 import RightSection from './Right/RightSection'
 import MainContent from './MainContent'
 
+
 function App() {
   const[search, setSearch]= React.useState('')
   console.log(Data)
@@ -17,6 +18,7 @@ function App() {
       <Sidebar />
       <MainContent search={search}/>
       <RightSection />
+      
       
     </div>
   )

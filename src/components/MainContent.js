@@ -11,6 +11,7 @@ import ContactCard from './Right/ContactCard'
 import Apps from './linked components/Apps'
 import TermsAndConditions from './linked components/TermsAndConditions'
 import Home from './Home'
+import Footer from './Footer'
 
 
 
@@ -32,6 +33,7 @@ function MainContent({search}) {
             <Route path='apps' element={<Apps/>} />
             
         </Routes>
+        <Footer/>
         
     </div>
   )
