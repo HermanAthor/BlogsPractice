@@ -1,0 +1,11 @@
+.input--container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: linear-gradient(rgb(126, 134, 186), rgb(59, 59, 58));
+}

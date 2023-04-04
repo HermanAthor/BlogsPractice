@@ -12,6 +12,7 @@ import Apps from './linked components/Apps'
 import TermsAndConditions from './linked components/TermsAndConditions'
 import Home from './Home'
 import Footer from './Footer'
+import Signup from './Signup'
 
 
 
@@ -31,6 +32,7 @@ function MainContent({search}) {
             <Route path='friends' element={<Friends/>} />
             <Route path='profile' element={<ContactCard/>} />
             <Route path='apps' element={<Apps/>} />
+            <Route path='signup' element={<Signup/>} />
             
         </Routes>
         <Footer/>
