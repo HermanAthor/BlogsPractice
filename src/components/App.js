@@ -6,6 +6,7 @@ import Sidebar from './Sidebar'
 import "./app.css"
 import RightSection from './Right/RightSection'
 import MainContent from './MainContent'
+import { Grid, Box } from '@mui/material'
 
 
 function App() {
@@ -13,14 +14,20 @@ function App() {
   console.log(Data)
   
   return (
-    <div className='app-container'>
-      <Header setSearch={setSearch}/>
-      <Sidebar />
-      <MainContent search={search}/>
-      <RightSection />
-      
-      
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid><Header setSearch={setSearch}/></Grid>
+      <Grid container spacing={3}>
+        <Grid xs="auto">
+          <Sidebar/>
+        </Grid>
+        <Grid xs={6}>
+          <MainContent search={search}/>
+        </Grid>
+        <Grid xs>
+          <RightSection/>
+        </Grid>
+      </Grid>
+    </Box>
   )
 }
 
@@ -31,3 +38,16 @@ export default App
 <Info data={Data} /> 
 <Sidebar />
 */
+
+
+
+
+      // <Header setSearch={setSearch}/>
+      // <Sidebar />
+      // <MainContent search={search}/>
+      // <RightSection />
+
+      // <div className='app-container'>
+      
+      
+      // </div>

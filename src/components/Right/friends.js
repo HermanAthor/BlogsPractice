@@ -1,6 +1,7 @@
 import React from 'react'
 import "./friends.css";
 import {data} from "./friendsData"
+//import { Avatar } from '@mui/material';
 
 function Friends() {
   return (
@@ -17,6 +18,11 @@ function Friends() {
                                 <div className='icon'>
                                     <img src={imgg} alt={name}/>
                                     <div className={ isActive ? 'green-div' : 'not-green'}></div>
+                                    {/* <Avatar 
+                                        src={imgg}
+                                        alt={name}
+                                        sx={{ width: 100, height: 100 }}
+                                    /> */}
                                 </div>
                                 <div className='details'>
                                     <h4>{name}</h4>

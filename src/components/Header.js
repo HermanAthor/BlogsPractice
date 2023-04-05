@@ -1,6 +1,9 @@
 import React from 'react'
 import "./header.css"
 import { Link } from 'react-router-dom'
+import { TextField } from '@mui/material'
+
+
 
 //import {useState, useEffect} from "react"
 
@@ -31,12 +34,20 @@ function Header({setSearch}) {
      
     <div className= "header-container">
         <h1>INSTRUMENT.</h1>
-        <input
+        {/* <input
           type='text'
           placeholder='Search Posts'
           onChange={(e)=> setSearch(e.target.value)}
           className="search-input"
-        />
+  /> */}
+          <TextField
+            variant='filled'
+            type='search'
+            label='Search for posts'
+            onChange={(e)=> setSearch(e.target.value)}
+            sx={{ borderRadius:'50%', width: 1/3, margin:4, color: 'primary.contrastText', }}
+
+          />
         <ul>
             <li>WHAT WE DO</li>
             <li>WHO WE ARE</li>
