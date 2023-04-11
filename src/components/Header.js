@@ -1,7 +1,8 @@
 import React from 'react'
 import "./header.css"
 import { Link } from 'react-router-dom'
-import { TextField } from '@mui/material'
+import { TextField , IconButton} from '@mui/material'
+import SearchIcon from '@mui/icons-material/Search';
 
 
 
@@ -46,6 +47,9 @@ function Header({setSearch}) {
             label='Search for posts'
             onChange={(e)=> setSearch(e.target.value)}
             sx={{ borderRadius:'50%', width: 1/3, margin:4, color: 'primary.contrastText', }}
+            InputProps={{ endAdornment:<IconButton position="end">
+              <SearchIcon/>
+            </IconButton> }}
 
           />
         <ul>
