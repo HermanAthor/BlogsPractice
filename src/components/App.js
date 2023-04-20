@@ -14,20 +14,21 @@ function App() {
   console.log(Data)
   
   return (
-    <Grid container my={3} sx={{ flexGrow: 1 }}>
-      <Grid><Header setSearch={setSearch}/></Grid>
-      <Grid container spacing={3}>
-        <Grid xs="auto">
-          <Box><Sidebar/></Box>
-        </Grid>
-        <Grid xs={6}>
-          <Box><MainContent search={search}/></Box>
-        </Grid>
-        <Grid xs>
-          <Box><RightSection/></Box>
-        </Grid>
+    <Grid container spacing={0} sx={{ }}>
+      <Grid item xs={12}>
+        <Header setSearch={setSearch}/>
+      </Grid>
+      <Grid item xs={2} sx={{mt:'100px' }}>
+        <Sidebar/>
+      </Grid>
+      <Grid item xs={6}>
+        <MainContent search={search}/>
+      </Grid>
+      <Grid item xs={4}>
+        <RightSection/>
       </Grid>
     </Grid>
+    
   )
 }
 
